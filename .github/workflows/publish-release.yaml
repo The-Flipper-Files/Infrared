@@ -10,14 +10,17 @@ jobs:
     - uses: actions/checkout@master
       with:
         submodules: true
+    - name: Set outputs
+        id: vars
+        run: echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
     - name: Create Draft Release
       id: create_release
       uses: actions/create-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: ${{ github.sha }}
-        release_name: "${{ github.sha }}"
+        tag_name: ${{ steps.vars.outputs.sha_short }}
+        release_name: "${{ steps.vars.outputs.sha_short }}"
         draft: true
         prerelease: false
     - name: Generate ZIP
