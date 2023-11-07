@@ -1,6 +1,4 @@
-# {{REPO TITLE}}
-{{REPO DESCRIPTION}}
-
+# Infrared
+Infrared files for the Flipper Zero
 ## LICENSE
-{{sub-project-licenses}}
 Everything else is under the [MIT LICENSE](/LICENSE)
