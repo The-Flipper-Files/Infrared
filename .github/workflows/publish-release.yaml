@@ -11,8 +11,8 @@ jobs:
       with:
         submodules: true
     - name: Set outputs
-        id: vars
-        run: echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+      id: vars
+      run: echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
     - name: Create Draft Release
       id: create_release
       uses: actions/create-release@v1
