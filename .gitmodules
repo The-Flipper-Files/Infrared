@@ -1,0 +1,3 @@
+[submodule "IRDB"]
+	path = IRDB
+	url = https://github.com/Lucaslhm/Flipper-IRDB
